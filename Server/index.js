@@ -1,7 +1,9 @@
 const express = require('express')
+const cors=require('cors')
 require('./db/config')
 const User=require('./router/signup')
 const app=express();
+app.use(cors())
 app.use(express.json())
 
 app.use('/',User)
